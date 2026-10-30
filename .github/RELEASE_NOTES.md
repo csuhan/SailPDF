@@ -1,7 +1,10 @@
 Sail PDF 0.11.2 Beta adds a clearer Mac installation flow, with crisp Retina artwork and English/Chinese first-launch instructions visible before you open the app.
 
+**Package refresh — October 30, 2026:** this existing v0.11.2 release now contains the smaller packages. The DMG is approximately **101 MB**, down from **168 MB** (40% smaller), and the installed application is approximately **308 MB**, down from **416 MB** (26% smaller). The version number and download URLs are unchanged; use the refreshed `SHA256SUMS.txt` to verify a new download.
+
 ### What changed
 
+- Exclude duplicate bundled dependencies and PDF.js resources, retain English/Simplified Chinese framework languages, and create the DMG with more efficient compression. PDF editing, OCR and the local AI runtime remain included.
 - Render the DMG artwork separately at 1× and 2× resolution for Retina displays.
 - Keep the app and Applications icons as native draggable Finder items, with all installation steps visible in one window without scrolling.
 - Include a bilingual `INSTALL.txt` in the DMG and add the same first-launch guidance to the website download dialog.
@@ -30,6 +33,8 @@ See the repository README and in-app help for privacy, licensing and known limit
 ---
 
 **中文说明：** 0.11.2 为 Mac 安装窗口加入分别渲染的 1×/2× Retina 高清背景。应用与“应用程序”图标仍为原生可拖拽项目，中英文安装步骤和首次启动说明可在一个窗口内完整看到，无需滚动。DMG 内附有双语 `INSTALL.txt`，官网下载弹窗也展示相同步骤。
+
+**2026 年 10 月 30 日安装包更新：** 保留 v0.11.2 版本号和原下载链接，替换为精简后的安装包。DMG 从约 **168 MB 降至 101 MB**，减少 **40%**；安装后从约 **416 MB 降至 308 MB**，减少 **26%**。通过移除重复依赖、重复资源、未使用的框架语言并改进压缩实现，保留 PDF、OCR、本地 AI 和中英文界面。请使用更新后的 `SHA256SUMS.txt` 校验新下载的文件。
 
 本版本保留 0.11.1 的完整临时签名及安装包校验，仍为**未经 Apple 公证的 Apple Silicon 测试版**。临时签名用于校验包完整性，不代表开发者身份已验证；首次启动可能需要在**系统设置 → 隐私与安全性**中点击“仍要打开”，再按系统提示确认。
 

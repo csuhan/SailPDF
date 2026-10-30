@@ -7,13 +7,13 @@ files:
   - dist/**/*
   - electron/**/*
   - build/icon.png
-  - public/cmaps/**
-  - public/standard_fonts/**
   - package.json
   - LICENSE
   - NOTICE
   - locales/**/*
   - '!dist/samples/**/*'
+  # Renderer dependencies are already bundled by Vite; the main process uses built-ins only.
+  - '!node_modules{,/**/*}'
   - '!**/@napi-rs'
   - '!**/*.d.ts'
 extraResources:
@@ -26,6 +26,9 @@ extraResources:
     filter:
       - '**/*'
 mac:
+  electronLanguages:
+    - en
+    - zh-CN
   artifactName: Sail-PDF-${version}-macOS-${arch}.${ext}
   category: public.app-category.productivity
   icon: build/icon.icns
@@ -40,6 +43,8 @@ mac:
     CFBundleDisplayName: Sail PDF
 dmg:
   title: Sail PDF
+  # Direct-builder fallback; package:mac uses the smaller ULMO format before metadata generation.
+  format: ULFO
   background: build/installer-background.png
   iconSize: 80
   window:

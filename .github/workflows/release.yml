@@ -36,7 +36,7 @@ jobs:
       - run: npm run test:native
       - run: npm run app:prepare
       - name: Package ad-hoc signed Apple Silicon beta
-        run: npx electron-builder --mac dmg zip --arm64
+        run: npm run package:mac -- --mac dmg zip --arm64
       - name: Verify signatures inside downloadable packages
         run: node scripts/verify-macos-package.cjs release/Sail-PDF-*.dmg release/Sail-PDF-*.zip | tee release/VERIFICATION.txt
       - name: Generate checksums

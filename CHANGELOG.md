@@ -1,7 +1,9 @@
 # Changelog
 
-## 0.11.2 — Guided Mac installation
+## 0.11.2 — Smaller downloads and guided Mac installation
 
+- Refresh the existing 0.11.2 packages on October 30, 2026: reduce the DMG from about 168 MB to 101 MB and the installed app from about 416 MB to 308 MB, keeping the same version and download URLs.
+- Exclude duplicate bundled dependencies and PDF.js resources, keep English/Simplified Chinese framework languages, and use more efficient DMG compression without removing PDF, OCR or local AI features.
 - Add Retina 1×/2× artwork to the DMG, with native draggable app and Applications icons.
 - Fit bilingual installation and first-launch approval steps in one window without scrolling.
 - Include bilingual `INSTALL.txt` instructions in the DMG and show the same first-launch guidance on the website.
