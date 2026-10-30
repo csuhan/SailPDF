@@ -28,7 +28,7 @@ The interface and native menus support **English and Simplified Chinese**. Engli
 
 The current packaged beta supports **macOS on Apple Silicon**. Get the DMG or ZIP and its checksums from [GitHub Releases](https://github.com/csuhan/SailPDF/releases).
 
-**This beta is unsigned and not notarized.** macOS may show a security warning. Keep backups of important documents and review saved results, especially for complex layouts and fonts. Windows, Linux and Intel Mac installers are not included in this release.
+**This beta is ad-hoc signed and not notarized by Apple.** The signature verifies bundle integrity, but does not establish a verified developer identity. First launch may require explicit approval in **System Settings → Privacy & Security**. Keep backups of important documents and review saved results, especially for complex layouts and fonts. Windows, Linux and Intel Mac installers are not included in this release.
 
 ## Privacy and AI
 

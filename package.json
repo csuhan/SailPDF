@@ -2,7 +2,7 @@
   "name": "sail-pdf",
   "private": true,
   "license": "Apache-2.0",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "type": "module",
   "main": "electron/main.cjs",
   "description": "An open-source PDF workspace for macOS: reading, annotations, editing and optional on-device AI.",

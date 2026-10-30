@@ -28,7 +28,7 @@
 
 当前桌面测试版支持 **macOS Apple Silicon**。请从 [GitHub Releases](https://github.com/csuhan/SailPDF/releases) 获取 DMG 或 ZIP，以及对应校验值。
 
-**当前测试版未签名、未经公证**，macOS 可能显示安全提示。请保留重要文档的备份，并检查保存结果，尤其是复杂版式和字体。当前版本暂不提供 Windows、Linux 或 Intel Mac 安装包。
+**当前测试版采用临时签名、未经 Apple 公证**。临时签名用于校验包完整性，不代表开发者身份已验证。首次启动可能需要在**系统设置 → 隐私与安全性**中明确允许。请保留重要文档的备份，并检查保存结果，尤其是复杂版式和字体。当前版本暂不提供 Windows、Linux 或 Intel Mac 安装包。
 
 ## 隐私与 AI
 

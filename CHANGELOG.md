@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.11.1 — macOS package signature fix
+
+- Apply a complete ad-hoc signature to the application bundle and its nested code after packaging, fixing the invalid bundle signature in the original 0.11.0 download.
+- Verify the app, OCR helper and bundled llama binaries inside both downloadable DMG and ZIP packages before publishing.
+- Keep this release a non-notarized Apple Silicon beta. First launch may require explicit approval in macOS System Settings → Privacy & Security.
+
 ## 0.11.0 — Sail PDF
 
 - Rename the application and project to Sail PDF, with the approved open-sail mark across the app icon, interface, website and documentation.

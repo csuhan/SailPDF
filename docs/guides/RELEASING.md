@@ -5,7 +5,7 @@ The supported package target is macOS Apple Silicon. Build on a matching Mac wit
 1. Update `package.json`, the lockfile, `CHANGELOG.md` and website version text together. Run `npm run build:website` after these edits and include the refreshed website files.
 2. Run `npm ci`, `npm test`, `npm run build`, `npm run test:fixtures`, `npm run test:e2e`, `npm run test:native` and `npm run format:check`.
 3. Run `npm run app:prepare`. This verifies the pinned official llama.cpp archive, compiles the OCR helper and generates icons.
-4. Package with `npx electron-builder --mac dir dmg zip --arm64`. The output is under `release/`.
+4. Package with `npx electron-builder --mac dir dmg zip --arm64`. The output is under `release/`. The `afterSign` hook verifies the application and all bundled native components. Run `node scripts/verify-macos-package.cjs release/Sail-PDF-*.dmg release/Sail-PDF-*.zip` to verify both downloadable archives before upload.
 5. Open the actual packaged app with an isolated `PDFPRO_USER_DATA` directory. Verify document opening, language selection, branding, changes and saving using test files.
 6. Run `node scripts/check-publication.mjs` against the staged/tracked files. Check that test PDFs, system fonts, profiles, binaries and credentials are not in the source commit.
 7. Push the verified source commit and matching `v<version>` tag. Upload the DMG, ZIP and SHA-256 checksums to a GitHub prerelease. Never replace an existing release silently.
@@ -14,7 +14,7 @@ The manual Release workflow performs packaging for an existing tag that matches 
 
 ## Signing
 
-Current beta packages are unsigned and not notarized. Label them clearly as prereleases. Do not describe them as notarized or production-ready. Adding Apple signing/notarization requires the maintainer's own certificates and account; never commit those credentials.
+Current beta packages use complete ad-hoc signatures and are not notarized. The signature verifies bundle integrity, but does not establish a verified developer identity or Gatekeeper acceptance. Label them clearly as prereleases and explain that first launch may require explicit approval in macOS System Settings → Privacy & Security. Do not describe them as notarized or production-ready. Adding Developer ID signing and notarization requires the maintainer's own certificates and account; never commit those credentials.
 
 ## Files included in the app
 

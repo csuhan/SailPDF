@@ -1,5 +1,6 @@
 appId: com.pdfpro.app
 productName: Sail PDF
+afterSign: scripts/verify-macos-package.cjs
 directories:
   output: release
 files:
@@ -31,8 +32,10 @@ mac:
   target:
     - dir
     - dmg
-  identity: null
+  # Seal the complete bundle for beta builds; this is not Developer ID signing.
+  identity: '-'
   hardenedRuntime: false
+  notarize: false
   extendInfo:
     CFBundleDisplayName: Sail PDF
 dmg:
