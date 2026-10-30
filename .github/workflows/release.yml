@@ -41,8 +41,9 @@ jobs:
         run: node scripts/verify-macos-package.cjs release/Sail-PDF-*.dmg release/Sail-PDF-*.zip | tee release/VERIFICATION.txt
       - name: Generate checksums
         run: |
+          cp build/INSTALL.txt release/INSTALL.txt
           cd release
-          shasum -a 256 Sail-PDF-*.dmg Sail-PDF-*.zip > SHA256SUMS.txt
+          shasum -a 256 Sail-PDF-*.dmg Sail-PDF-*.zip INSTALL.txt VERIFICATION.txt > SHA256SUMS.txt
       - name: Create prerelease
         run: |
-          gh release create "$RELEASE_TAG" release/Sail-PDF-*.dmg release/Sail-PDF-*.zip release/SHA256SUMS.txt release/VERIFICATION.txt --verify-tag --prerelease --title "Sail PDF $RELEASE_TAG Beta" --notes-file .github/RELEASE_NOTES.md
+          gh release create "$RELEASE_TAG" release/Sail-PDF-*.dmg release/Sail-PDF-*.zip release/INSTALL.txt release/SHA256SUMS.txt release/VERIFICATION.txt --verify-tag --prerelease --title "Sail PDF $RELEASE_TAG Beta" --notes-file .github/RELEASE_NOTES.md

@@ -2,6 +2,7 @@ node_modules/
 dist/
 release/
 build/*.png
+build/INSTALL.txt
 build/*.icns
 build/*.iconset/
 native/pdfpro-ocr

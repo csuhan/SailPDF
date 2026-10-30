@@ -40,9 +40,23 @@ mac:
     CFBundleDisplayName: Sail PDF
 dmg:
   title: Sail PDF
+  background: build/installer-background.png
+  iconSize: 80
   window:
-    width: 540
-    height: 380
+    width: 720
+    height: 560
+  contents:
+    - x: 190
+      y: 190
+      type: file
+    - x: 530
+      y: 190
+      type: link
+      path: /Applications
+    - x: 590
+      y: 430
+      type: file
+      path: build/INSTALL.txt
 fileAssociations:
   - ext: pdf
     name: PDF Document

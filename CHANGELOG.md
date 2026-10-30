@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.11.2 — Guided Mac installation
+
+- Add Retina 1×/2× artwork to the DMG, with native draggable app and Applications icons.
+- Fit bilingual installation and first-launch approval steps in one window without scrolling.
+- Include bilingual `INSTALL.txt` instructions in the DMG and show the same first-launch guidance on the website.
+- Retain the complete ad-hoc signatures and strict DMG/ZIP verification introduced in 0.11.1. This beta remains non-notarized.
+
 ## 0.11.1 — macOS package signature fix
 
 - Apply a complete ad-hoc signature to the application bundle and its nested code after packaging, fixing the invalid bundle signature in the original 0.11.0 download.

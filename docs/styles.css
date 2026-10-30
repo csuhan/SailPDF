@@ -1760,6 +1760,28 @@ p {
   color: #8b9aa4;
   margin-top: 15px;
 }
+.install-guide {
+  border-top: 1px solid var(--line);
+  margin: 0 0 22px;
+  padding-top: 18px;
+}
+.install-guide h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.install-guide ol {
+  display: grid;
+  gap: 10px;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #586e7c;
+}
+.install-guide li {
+  padding-left: 4px;
+  overflow-wrap: anywhere;
+}
 .tool-dialog .dialog-icon {
   margin-bottom: 19px;
 }
