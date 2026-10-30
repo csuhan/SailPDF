@@ -1,0 +1,27 @@
+Sail PDF on-device models and inference engine
+Reviewed: October 30, 2026
+
+Engine
+The app bundles llama.cpp b11980 under the MIT License. Its full notice is included in the third-party notices.
+https://github.com/ggml-org/llama.cpp/releases/tag/b11980
+https://github.com/ggml-org/llama.cpp
+
+Model weights
+Weights are not included in the app package. They are downloaded from Hugging Face only when you request them and checked against their published SHA-256 values. The catalog includes:
+- Gemma 4 E2B: google/gemma-4-E2B-it-qat-q4_0-gguf
+- Gemma 4 E4B: google/gemma-4-E4B-it-qat-q4_0-gguf
+- Gemma 4 12B: google/gemma-4-12B-it-qat-q4_0-gguf
+
+Google's official Gemma 4 license page specifies Apache License 2.0. The official E2B model card also identifies apache-2.0 and links to that page. See the source model card and actual version before using or redistributing weights.
+https://ai.google.dev/gemma/docs/gemma_4_license
+https://huggingface.co/google/gemma-4-E2B-it-qat-q4_0-gguf
+https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf
+https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf
+
+The complete Apache License is included in legal/APACHE-2.0.txt. Retain the authors' licenses and notices when modifying or redistributing model weights. This app's notices do not grant additional model or trademark rights.
+
+Custom services
+Custom AI endpoints may require accounts, fees and separate terms or privacy policies. The app does not register, accept agreements or pay for services on your behalf.
+
+Fonts
+PDF.js CMaps and standard fonts retain their respective licenses in the third-party notices. Operating system fonts are not distributed with the app; check their terms before embedding or redistributing them.

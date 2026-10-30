@@ -1,0 +1,135 @@
+.app-root.navigation-layout {
+  flex-direction: row;
+}
+.workspace-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  height: 100%;
+}
+.app-navigation {
+  width: 96px;
+  flex: 0 0 96px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  z-index: 30;
+}
+.navigation-window-space {
+  height: 16px;
+  flex-shrink: 0;
+  -webkit-app-region: drag;
+}
+.navigation-mac .navigation-window-space {
+  height: 52px;
+}
+.navigation-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 6px;
+  overflow-y: auto;
+}
+.app-navigation .navigation-item {
+  width: 100%;
+  min-height: 62px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 9px 3px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-2);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+.app-navigation .navigation-item:hover:not(:disabled) {
+  background: var(--hover);
+  color: var(--text);
+}
+.app-navigation .navigation-item.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: none;
+  font-weight: 650;
+}
+.app-navigation .navigation-item.active svg {
+  color: currentColor;
+}
+.app-navigation .navigation-item > span {
+  display: block;
+}
+.app-navigation .navigation-item:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.navigation-bottom {
+  margin-top: auto;
+  padding: 8px 6px 12px;
+  border-top: 1px solid var(--line);
+}
+.workspace-content .app-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.workspace-content .app-header .hd-left {
+  flex: 1;
+  min-width: 0;
+}
+.workspace-content .app-header .hd-right {
+  flex-shrink: 0;
+}
+.workspace-content .app-header.mac-titlebar,
+.workspace-content .home-header.mac-titlebar {
+  padding-left: 16px;
+}
+.workspace-content .home {
+  min-width: 0;
+  flex: 1;
+}
+.workspace-content .sidebar {
+  width: 216px;
+}
+@media (max-width: 1180px) {
+  .workspace-content .sidebar {
+    width: 190px;
+  }
+  .workspace-content .app-header {
+    gap: 8px;
+  }
+  .workspace-content .doc-meta {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .app-navigation {
+    width: 62px;
+    flex-basis: 62px;
+  }
+  .navigation-modes {
+    padding: 4px;
+    gap: 4px;
+  }
+  .app-navigation .navigation-item {
+    min-height: 56px;
+  }
+  .workspace-content .sidebar {
+    width: 156px;
+  }
+  .workspace-content .app-header {
+    padding: 0 6px;
+  }
+  .workspace-content .app-header .doc-icon {
+    display: none;
+  }
+}

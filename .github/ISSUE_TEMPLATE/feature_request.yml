@@ -1,0 +1,13 @@
+name: Feature request
+description: Describe a document task that Sail PDF could support better.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      { label: What are you trying to accomplish?, description: 'Describe the user task and the current difficulty.' }
+    validations: { required: true }
+  - type: textarea
+    id: proposal
+    attributes: { label: Suggested behavior, description: 'Include an example or alternative workflow if helpful.' }
+    validations: { required: true }

@@ -1,0 +1,23 @@
+name: 问题反馈（中文）
+description: 使用合成或脱敏材料报告可复现的问题。
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: 'Issue 公开可见，请勿附加私密 PDF、个人资料、本机配置或密钥。安全漏洞请通过私密报告渠道提交。'
+  - type: input
+    id: version
+    attributes: { label: Sail PDF 版本, placeholder: '例如：0.11.0' }
+    validations: { required: true }
+  - type: input
+    id: environment
+    attributes: { label: 系统与设备, placeholder: 'macOS 版本、芯片型号、内存' }
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes: { label: 复现步骤 }
+    validations: { required: true }
+  - type: textarea
+    id: result
+    attributes: { label: 预期与实际结果 }
+    validations: { required: true }

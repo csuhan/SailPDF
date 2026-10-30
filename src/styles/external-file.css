@@ -1,0 +1,22 @@
+.external-file-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #fff4d6;
+  color: #61410e;
+  border-bottom: 1px solid #e9d398;
+  font-size: 13px;
+}
+.external-file-banner > span {
+  flex: 1 1 300px;
+}
+.external-file-banner .btn {
+  flex-shrink: 0;
+}
+[data-theme='dark'] .external-file-banner {
+  background: #3b301b;
+  color: #f5d998;
+  border-color: #66542e;
+}

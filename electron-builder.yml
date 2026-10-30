@@ -1,0 +1,46 @@
+appId: com.pdfpro.app
+productName: Sail PDF
+directories:
+  output: release
+files:
+  - dist/**/*
+  - electron/**/*
+  - build/icon.png
+  - public/cmaps/**
+  - public/standard_fonts/**
+  - package.json
+  - LICENSE
+  - NOTICE
+  - locales/**/*
+  - '!dist/samples/**/*'
+  - '!**/@napi-rs'
+  - '!**/*.d.ts'
+extraResources:
+  - from: native/pdfpro-ocr
+    to: pdfpro-ocr
+  # llama.cpp llama-server + its dylibs (fetched by scripts/fetch-llama.mjs);
+  # model weights are downloaded by the app on first use
+  - from: vendor/llama
+    to: llama
+    filter:
+      - '**/*'
+mac:
+  artifactName: Sail-PDF-${version}-macOS-${arch}.${ext}
+  category: public.app-category.productivity
+  icon: build/icon.icns
+  target:
+    - dir
+    - dmg
+  identity: null
+  hardenedRuntime: false
+  extendInfo:
+    CFBundleDisplayName: Sail PDF
+dmg:
+  title: Sail PDF
+  window:
+    width: 540
+    height: 380
+fileAssociations:
+  - ext: pdf
+    name: PDF Document
+    role: Editor

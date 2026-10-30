@@ -1,0 +1,68 @@
+.document-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 41px;
+  padding: 5px 10px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.document-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  min-width: 0;
+  scrollbar-width: thin;
+}
+.document-tab {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  max-width: 240px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: 9px 9px 0 0;
+  color: var(--text-2);
+}
+.document-tab.active {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--accent);
+}
+.document-tab > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 10px 9px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.document-tab > button[role='tab'] {
+  flex: 1;
+}
+.document-tab span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 165px;
+}
+.document-tab i {
+  font-size: 8px;
+  font-style: normal;
+}
+.document-tab .tab-close {
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.document-tab .tab-close:hover {
+  background: var(--hover);
+  color: var(--text);
+}

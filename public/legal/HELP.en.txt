@@ -1,0 +1,21 @@
+Sail PDF quick start
+
+Open and read
+Choose Open PDF, press ⌘O, or drop files into the window. You can open several PDFs in separate tabs. Use the bottom controls for zoom, page navigation, layout and reading colors. Press ⌘F to find text, or ⌘K to search tools. Change the interface language in Settings → Appearance & reading. English is the default; Simplified Chinese is also available. Your choice is saved locally.
+
+Annotate and edit
+Select Annotate to add notes, highlights, underlines and strikeouts. Use Select to pick an existing mark and delete it, or manage annotations in the sidebar. Flattened markings cannot be deleted as individual annotations. Edit supports common text and image changes; complex fonts and layouts may have limitations. Use Pages to organize, rotate, merge or extract pages.
+
+Save and recover
+Press ⌘S to choose a save location the first time; later saves use that location. Press ⇧⌘S to save a copy. The app checks PDF output before writing it and warns when another application changes the disk file. Resolve a conflict by reloading or saving a separate copy.
+When recovery drafts are enabled, edits and form values are backed up after the configured delay and before switching documents. Reopen the same source PDF after an unexpected exit to restore a draft. A draft from a different file version is not applied automatically. A visible storage warning means you should save manually. Drafts do not replace independent backups or guarantee recovery of data that was not written before termination.
+
+AI assistant
+Use the left Assistant button or ⌘J to open or close the panel. Configure an on-device model or an OpenAI-compatible service in Settings. AI answer language is a separate option from interface language. Changing interface language does not translate PDF content, user notes, conversations or existing edits. Check sources and proposed changes before applying them.
+
+Privacy and feedback
+Standard document operations run locally. A custom AI service receives the context required for your task; review its data practices. Use Settings → Help & feedback to read privacy and license notices, copy a report or export diagnostics. Reports are not submitted automatically. Review them before sharing and do not include private documents or credentials.
+
+Repository: https://github.com/csuhan/SailPDF
+Feedback: https://github.com/csuhan/SailPDF/issues/new/choose
+Releases: https://github.com/csuhan/SailPDF/releases

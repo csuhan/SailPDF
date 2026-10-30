@@ -1,0 +1,27 @@
+Sail PDF 本机模型与运行引擎许可
+核对日期：2026-10-30
+
+运行引擎
+内置 llama.cpp b11980，采用 MIT License，完整声明收录于“第三方软件与字体许可”。使用的预编译引擎来源：
+https://github.com/ggml-org/llama.cpp/releases/tag/b11980
+上游代码及第三方说明：https://github.com/ggml-org/llama.cpp
+
+模型权重
+应用安装包不包含模型权重。只有你点击下载后，才从 Hugging Face 获取选定文件并校验 SHA-256。内置目录目前包括：
+- Gemma 4 E2B：google/gemma-4-E2B-it-qat-q4_0-gguf
+- Gemma 4 E4B：google/gemma-4-E4B-it-qat-q4_0-gguf
+- Gemma 4 12B：google/gemma-4-12B-it-qat-q4_0-gguf
+
+Google 官方 Gemma 4 许可页面采用 Apache License 2.0；官方 E2B 模型卡的 license 字段为 apache-2.0，license_link 指向以下页面：
+https://ai.google.dev/gemma/docs/gemma_4_license
+https://huggingface.co/google/gemma-4-E2B-it-qat-q4_0-gguf
+https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf
+https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf
+
+Apache License 2.0 全文随应用提供在 legal/APACHE-2.0.txt，亦可在第三方 Apache 组件许可中查阅。模型原作者及模型卡保留各自版权与声明；商标不因软件或模型许可而转移。使用、修改、分发下载的权重时，应同时保留其实际发布版本的许可和通知，不把 Sail PDF 的说明当作对模型的额外授权。
+
+自定义接口
+第三方接口可能涉及单独的账号、费用、使用条款及数据处理政策。应用不会替你注册服务、接受协议或代付费用。请在连接前确认你使用的接口和模型的相应要求。
+
+字体
+应用随 PDF.js 提供的标准字体及 CMaps 有各自许可，已并入第三方声明。操作系统字体不随应用分发；向文档嵌入或分发其他字体时，请核对该字体本身的授权。

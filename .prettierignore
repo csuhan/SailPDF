@@ -1,0 +1,13 @@
+node_modules/
+dist/
+release/
+.scratch/
+website/
+public/cmaps/
+public/standard_fonts/
+public/pdfjs-images/
+public/samples/
+public/legal/*.html
+public/legal/*NOTICES.txt
+vendor/
+package-lock.json

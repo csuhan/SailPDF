@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag matching the package version (for example v0.11.0)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      RELEASE_TAG: ${{ inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Validate release target
+        run: |
+          node -e 'const p=require("./package.json");if(process.env.RELEASE_TAG!==`v${p.version}`)process.exit(1)'
+          test "$(git rev-parse "$RELEASE_TAG^{commit}")" = "$(git rev-parse HEAD)"
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm run test:native
+      - run: npm run app:prepare
+      - name: Package unsigned Apple Silicon beta
+        run: npx electron-builder --mac dmg zip --arm64
+      - name: Generate checksums
+        run: |
+          cd release
+          shasum -a 256 Sail-PDF-*.dmg Sail-PDF-*.zip > SHA256SUMS.txt
+      - name: Create prerelease
+        run: |
+          gh release create "$RELEASE_TAG" release/Sail-PDF-*.dmg release/Sail-PDF-*.zip release/SHA256SUMS.txt --verify-tag --prerelease --title "Sail PDF $RELEASE_TAG Beta" --notes-file .github/RELEASE_NOTES.md

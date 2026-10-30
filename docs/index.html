@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f7" />
+    <meta
+      name="description"
+      content="Sail PDF is an open-source desktop workspace for reading, annotating, editing and understanding PDFs. Local document tools. Your choice of AI."
+    />
+    <meta property="og:title" content="Sail PDF — A clearer way to work with PDFs" />
+    <meta
+      property="og:description"
+      content="Read, annotate, edit and understand. One focused PDF workspace, built for your Mac."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://csuhan.github.io/SailPDF/" />
+    <title>Sail PDF — A clearer way to work with PDFs</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="wordmark" href="#" aria-label="Sail PDF home" data-i18n-aria="home"
+          ><svg class="brand-mark" viewBox="15 15 70 70" aria-hidden="true">
+            <path d="M53 18C53 37 63 53 80 68H53Z" />
+            <path d="M44 35 21 74H44Z" /></svg
+          ><span>Sail <b>PDF</b><span class="wordmark-period">.</span></span></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria="navigation">
+          <a href="#workspace" data-i18n="navWorkspace">Workspace</a><a href="#tools" data-i18n="navTools">Tools</a
+          ><a href="#assistant" data-i18n="navAI">AI assistant</a
+          ><a href="#principles" data-i18n="navPrivacy">Our approach</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="language-switch" data-language aria-label="Switch to Chinese">
+            EN <span class="lang-divider">/</span> 中</button
+          ><a
+            class="github-link"
+            href="https://github.com/csuhan/SailPDF"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><i data-icon="github"></i></a
+          ><button class="button button-small button-ink nav-download" data-download>
+            <span data-i18n="download">Download</span><i data-icon="arrow-down"></i></button
+          ><button
+            class="mobile-menu-toggle icon-button"
+            aria-label="Open navigation"
+            data-i18n-aria="openNav"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <i data-icon="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#workspace" data-i18n="navWorkspace">Workspace</a><a href="#tools" data-i18n="navTools">Tools</a
+        ><a href="#assistant" data-i18n="navAI">AI assistant</a
+        ><a href="#principles" data-i18n="navPrivacy">Our approach</a
+        ><button class="button button-ink" data-download data-i18n="download">Download</button>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span><span data-i18n="heroLabel">YOUR DESKTOP. YOUR DOCUMENTS.</span>
+          </div>
+          <h1 data-i18n-html="heroTitle">Less friction.<br />More <span class="hero-emphasis">focus.</span></h1>
+        </div>
+        <div class="hero-intro">
+          <p data-i18n="heroDescription">
+            Read, annotate, edit and understand your PDFs. One thoughtful workspace that puts the document first.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-ink" data-download>
+              <i data-icon="apple"></i><span data-i18n="downloadMac">Get Sail PDF for Mac</span
+              ><i data-icon="arrow-down"></i></button
+            ><a class="text-link" href="#workspace"
+              ><span data-i18n="explore">Explore the workspace</span><i data-icon="arrow-down-right"></i
+            ></a>
+          </div>
+          <p class="hero-caption">
+            <span data-i18n="releaseShort">v0.11.0 Beta · Apple Silicon</span><span class="caption-dot">·</span
+            ><span data-i18n="openSource">Open source</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="workspace" class="workspace-section wrap" aria-labelledby="workspace-title">
+        <h2 id="workspace-title" class="sr-only" data-i18n="workspaceTitle">Explore the Sail PDF workspace</h2>
+        <div class="demo-stage">
+          <div class="demo-app" aria-label="Interactive product illustration" data-i18n-aria="demoLabel">
+            <aside class="demo-rail">
+              <div class="traffic-lights" aria-hidden="true"><b></b><b></b><b></b></div>
+              <button class="demo-rail-ai" data-demo="ai" aria-label="Preview AI assistant" data-i18n-aria="previewAI">
+                <i data-icon="sparkle"></i><span data-i18n="demoAssistant">Assistant</span>
+              </button>
+              <div class="demo-rail-modes">
+                <button class="active" data-demo="read">
+                  <i data-icon="book"></i><span data-i18n="read">Read</span></button
+                ><button data-demo="edit"><i data-icon="edit"></i><span data-i18n="edit">Edit</span></button
+                ><button data-demo="annotate">
+                  <i data-icon="highlight"></i><span data-i18n="annotate">Annotate</span></button
+                ><button data-demo="pages"><i data-icon="pages"></i><span data-i18n="pages">Pages</span></button>
+              </div>
+              <button class="demo-settings" data-demo="tools">
+                <i data-icon="grid"></i><span data-i18n="tools">Tools</span>
+              </button>
+            </aside>
+            <div class="demo-main">
+              <div class="demo-toolbar">
+                <div class="toolbar-document">
+                  <i data-icon="panel"></i><span>Project Atlas.pdf</span
+                  ><small data-i18n="demoPageCount">3 pages</small>
+                </div>
+                <div class="toolbar-icons">
+                  <span class="saved-status"
+                    ><span class="status-dot"></span><span data-i18n="saved">Saved locally</span></span
+                  ><button
+                    class="icon-button"
+                    data-demo="tools"
+                    aria-label="Explore tools"
+                    data-i18n-aria="exploreTools"
+                  >
+                    <i data-icon="search"></i></button
+                  ><button
+                    class="icon-button"
+                    data-demo="ai"
+                    aria-label="Preview AI assistant"
+                    data-i18n-aria="previewAI"
+                  >
+                    <i data-icon="sparkle"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="demo-document-tabs"
+                role="tablist"
+                aria-label="Example documents"
+                data-i18n-aria="exampleDocuments"
+              >
+                <button class="active" role="tab" aria-selected="true" data-document="atlas">
+                  <i data-icon="file"></i>Project Atlas.pdf <span aria-hidden="true">×</span></button
+                ><button role="tab" aria-selected="false" data-document="notes">
+                  <i data-icon="file"></i><span data-i18n="notesFile">Research notes.pdf</span
+                  ><span aria-hidden="true">×</span></button
+                ><span class="tab-plus" aria-hidden="true">+</span>
+              </div>
+              <div class="demo-canvas">
+                <aside class="demo-thumbnails" aria-label="Example pages" data-i18n-aria="examplePages">
+                  <div class="thumb-nav">
+                    <i data-icon="grid"></i><i data-icon="list"></i><i data-icon="bookmark"></i>
+                  </div>
+                  <button class="thumb active" data-page="1" aria-label="Preview page 1" data-i18n-aria="previewPage1">
+                    <div class="mini-page">
+                      <strong>PROJECT<br />ATLAS</strong><b></b><b></b><b></b><b></b>
+                    </div>
+                    <span>1</span></button
+                  ><button class="thumb" data-page="2" aria-label="Preview page 2" data-i18n-aria="previewPage2">
+                    <div class="mini-page mini-chart">
+                      <strong>FINDINGS</strong><b></b><b></b>
+                      <div><i></i><i></i><i></i><i></i></div>
+                      <b></b>
+                    </div>
+                    <span>2</span></button
+                  ><button class="thumb" data-page="3" aria-label="Preview page 3" data-i18n-aria="previewPage3">
+                    <div class="mini-page"><strong>NEXT STEPS</strong><b></b><b></b><b></b><b></b></div>
+                    <span>3</span>
+                  </button>
+                </aside>
+                <div class="document-area">
+                  <div class="demo-contextbar" hidden></div>
+                  <article class="demo-paper" aria-label="Illustrative PDF content" data-i18n-aria="illustrativePDF">
+                    <div class="paper-topline"><span>ATLAS STUDIO</span><span>RESEARCH / 2026</span></div>
+                    <div class="paper-content" id="paper-content"></div>
+                    <div class="paper-footer">
+                      <span>Project Atlas · Research & direction</span><span id="paper-number">01 / 03</span>
+                    </div>
+                  </article>
+                  <div class="page-organizer" hidden></div>
+                  <div class="demo-zoom" aria-hidden="true">
+                    <span>−</span><span>100%</span><span>+</span><b></b><i data-icon="expand"></i>
+                  </div>
+                </div>
+                <aside
+                  class="demo-ai-panel"
+                  hidden
+                  aria-label="AI assistant example"
+                  data-i18n-aria="assistantExample"
+                ></aside>
+              </div>
+            </div>
+          </div>
+          <div class="demo-stage-label">
+            <span
+              ><span class="status-dot"></span
+              ><span data-i18n="demoDisclosure">Interactive preview · illustrative content</span></span
+            ><span class="stage-hint"
+              ><i data-icon="pointer"></i><span data-i18n="demoHint">Try a mode below</span></span
+            >
+          </div>
+        </div>
+        <div class="workspace-controls">
+          <div class="workspace-tabs" role="tablist" aria-label="Workspace modes" data-i18n-aria="workspaceModes">
+            <button role="tab" aria-selected="true" class="active" data-demo="read">
+              <i data-icon="book"></i><span data-i18n="read">Read</span></button
+            ><button role="tab" aria-selected="false" data-demo="edit">
+              <i data-icon="edit"></i><span data-i18n="edit">Edit</span></button
+            ><button role="tab" aria-selected="false" data-demo="annotate">
+              <i data-icon="highlight"></i><span data-i18n="annotate">Annotate</span></button
+            ><button role="tab" aria-selected="false" data-demo="pages">
+              <i data-icon="pages"></i><span data-i18n="pages">Pages</span></button
+            ><button role="tab" aria-selected="false" data-demo="ai">
+              <i data-icon="sparkle"></i><span data-i18n="ai">AI assistant</span>
+            </button>
+          </div>
+          <p class="mode-description" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <div class="principle-strip wrap">
+        <div><i data-icon="laptop"></i><span data-i18n="stripLocal">Local document tools</span></div>
+        <div><i data-icon="layers"></i><span data-i18n="stripTabs">A home for every PDF</span></div>
+        <div><i data-icon="github"></i><span data-i18n="stripOpen">Open source. Apache 2.0.</span></div>
+        <div><i data-icon="sparkle"></i><span data-i18n="stripAI">Your choice of AI</span></div>
+      </div>
+
+      <section id="tools" class="tools-section wrap section-space">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow" data-i18n="toolsLabel">A COMPLETE DAILY TOOLKIT</div>
+            <h2 data-i18n-html="toolsTitle">The right tool.<br />Right where you need it.</h2>
+          </div>
+          <p data-i18n="toolsIntro">
+            From a quick highlight to a final export. Find the everyday essentials without interrupting your flow.
+          </p>
+        </div>
+        <div class="tool-browser">
+          <div class="tool-browser-bar">
+            <div
+              class="tool-categories"
+              role="tablist"
+              aria-label="Tool categories"
+              data-i18n-aria="toolCategories"
+            ></div>
+            <label class="tool-search"
+              ><i data-icon="search"></i
+              ><input
+                type="search"
+                aria-label="Search tools"
+                data-i18n-aria="searchTools"
+                placeholder="Find a tool…"
+                data-i18n-placeholder="searchPlaceholder"
+              /><kbd>/</kbd></label
+            >
+          </div>
+          <div class="tool-grid"></div>
+          <p class="tool-empty" role="status" hidden data-i18n="emptyTools">
+            No matching tools. Try another search or category.
+          </p>
+        </div>
+        <div class="tools-footnote">
+          <span data-i18n="toolsFootnote">Click any tool to see what it does.</span
+          ><a href="https://github.com/csuhan/SailPDF" target="_blank" rel="noopener noreferrer" class="text-link"
+            ><span data-i18n="allSource">Explore the source</span><i data-icon="arrow-up-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <section id="assistant" class="assistant-section">
+        <div class="wrap assistant-layout">
+          <div class="assistant-copy">
+            <div class="eyebrow">
+              <i data-icon="sparkle"></i><span data-i18n="aiLabel">A LITTLE HELP. A LOT OF CLARITY.</span>
+            </div>
+            <h2 data-i18n-html="aiTitle">Work with<br />your document.</h2>
+            <p data-i18n="aiIntro">
+              Ask questions, find the details that matter, or prepare an edit. Your assistant works alongside the PDF,
+              so the source stays in sight.
+            </p>
+            <div class="ai-principles">
+              <div>
+                <span>01</span>
+                <p>
+                  <b data-i18n="aiPoint1">Answers with a way back.</b
+                  ><span data-i18n="aiPoint1Text">Follow references to the relevant page and check the original.</span>
+                </p>
+              </div>
+              <div>
+                <span>02</span>
+                <p>
+                  <b data-i18n="aiPoint2">Review before applying.</b
+                  ><span data-i18n="aiPoint2Text">Inspect a proposed edit and decide whether to apply it.</span>
+                </p>
+              </div>
+              <div>
+                <span>03</span>
+                <p>
+                  <b data-i18n="aiPoint3">A model that fits your work.</b
+                  ><span data-i18n="aiPoint3Text">Use an on-device model or connect your own compatible service.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ai-example">
+            <div class="ai-example-header">
+              <span><i data-icon="sparkle"></i>Sail <span data-i18n="assistantShort">Assistant</span></span
+              ><span class="example-badge" data-i18n="example">EXAMPLE</span>
+            </div>
+            <div
+              class="ai-example-tabs"
+              role="tablist"
+              aria-label="Assistant examples"
+              data-i18n-aria="assistantExamples"
+            >
+              <button class="active" role="tab" aria-selected="true" data-ai-example="summary" data-i18n="summarize">
+                Summarize</button
+              ><button role="tab" aria-selected="false" data-ai-example="find" data-i18n="find">Find details</button
+              ><button role="tab" aria-selected="false" data-ai-example="revise" data-i18n="revise">
+                Prepare an edit
+              </button>
+            </div>
+            <div class="ai-example-body" aria-live="polite"></div>
+            <div class="ai-example-footer">
+              <i data-icon="file"></i><span>Project Atlas.pdf</span
+              ><span class="example-footer-right" data-i18n="exampleOnly">Illustrative response</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="principles" class="privacy-section wrap section-space">
+        <div class="privacy-intro">
+          <div class="eyebrow" data-i18n="privacyLabel">THOUGHTFUL BY DESIGN</div>
+          <h2 data-i18n-html="privacyTitle">Your files.<br />Your decisions.</h2>
+          <p data-i18n="privacyIntro">
+            A desktop workspace should respect your documents and your choices. Here's how Sail PDF approaches both.
+          </p>
+          <a class="text-link" href="https://github.com/csuhan/SailPDF" target="_blank" rel="noopener noreferrer"
+            ><i data-icon="github"></i><span data-i18n="viewGithub">View on GitHub</span
+            ><i data-icon="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="privacy-rows">
+          <article>
+            <span class="privacy-icon"><i data-icon="laptop"></i></span>
+            <div>
+              <h3 data-i18n="privacyLocalTitle">Everyday work stays on your device.</h3>
+              <p data-i18n="privacyLocalText">
+                Reading, annotations and standard edits are processed locally. No application account is required to use
+                these tools.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="privacy-icon"><i data-icon="shield"></i></span>
+            <div>
+              <h3 data-i18n="privacyAITitle">AI connections are your choice.</h3>
+              <p data-i18n="privacyAIText">
+                On-device models run on your Mac. Custom AI services receive the document context needed for the task.
+                Choose a service you trust.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="privacy-icon"><i data-icon="history"></i></span>
+            <div>
+              <h3 data-i18n="privacySaveTitle">Changes deserve a safety net.</h3>
+              <p data-i18n="privacySaveText">
+                Recovery drafts include form values. Save validation and external file conflict checks help you stay in
+                control of your work.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="privacy-icon"><i data-icon="code"></i></span>
+            <div>
+              <h3 data-i18n="privacyOpenTitle">Open to inspection. Open to contribution.</h3>
+              <p data-i18n="privacyOpenText">
+                The application source uses Apache 2.0. Read the code, report an issue, or help improve the next
+                version.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="download" class="download-section wrap">
+        <div class="download-panel">
+          <div class="download-emblem" aria-hidden="true">
+            <svg viewBox="15 15 70 70">
+              <path d="M53 18C53 37 63 53 80 68H53Z" />
+              <path d="M44 35 21 74H44Z" />
+            </svg>
+          </div>
+          <div>
+            <div class="eyebrow" data-i18n="downloadLabel">MAKE ROOM FOR BETTER WORK</div>
+            <h2 data-i18n="downloadTitle">Your next PDF starts here.</h2>
+            <p data-i18n="downloadDescription">Sail PDF 0.11.0 Beta · macOS · Apple Silicon</p>
+          </div>
+          <button class="button button-ink" data-download>
+            <i data-icon="apple"></i><span data-i18n="downloadMac">Get Sail PDF for Mac</span
+            ><i data-icon="arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section wrap section-space">
+        <div>
+          <div class="eyebrow" data-i18n="faqLabel">A FEW GOOD QUESTIONS</div>
+          <h2 data-i18n="faqTitle">Before you begin.</h2>
+          <p data-i18n="faqIntro">Can't find your answer?</p>
+          <a
+            class="text-link"
+            href="https://github.com/csuhan/SailPDF/issues/new/choose"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="askGithub">Ask on GitHub</span><i data-icon="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              <span data-i18n="faq6Q">Can I use Sail PDF in English or Chinese?</span><i data-icon="plus"></i>
+            </summary>
+            <p data-i18n="faq6A">
+              Yes. English is the default. Change the app interface to Simplified Chinese in Settings, and your
+              preference will be saved. Interface language does not translate PDF text, notes, forms or existing
+              conversations. The assistant answer language is a separate setting.
+            </p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq1Q">Which platforms are supported?</span><i data-icon="plus"></i></summary>
+            <p data-i18n="faq1A">
+              The current packaged beta is for Apple Silicon Macs. A browser build is available from source. Windows,
+              Linux and Intel Mac installers are not part of this release.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-i18n="faq2Q">Do I need an AI service to use Sail PDF?</span><i data-icon="plus"></i>
+            </summary>
+            <p data-i18n="faq2A">
+              No. Reading, editing, annotations and page tools work without an AI connection. To use the assistant,
+              download a supported on-device model in the app or configure your own OpenAI-compatible endpoint.
+            </p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq3Q">Are my PDFs uploaded?</span><i data-icon="plus"></i></summary>
+            <p data-i18n="faq3A">
+              Standard document tools process files locally. If you choose a custom AI service, the context needed for
+              your request is sent to that service. The app does not automatically upload documents or diagnostic
+              reports.
+            </p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq4Q">What should I know about the beta?</span><i data-icon="plus"></i></summary>
+            <p data-i18n="faq4A">
+              Keep backups of important documents and review exported results, especially for complex layouts or fonts.
+              This build is unsigned and not notarized. Paragraph reflow, some font types and flattened annotations have
+              editing limitations.
+            </p>
+          </details>
+          <details>
+            <summary><span data-i18n="faq5Q">Can I use and modify the source?</span><i data-icon="plus"></i></summary>
+            <p data-i18n="faq5A">
+              Yes, under the Apache License 2.0 and its conditions. Third-party software, fonts and models retain their
+              own licenses. The repository includes the license and attribution notices.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div class="footer-top">
+        <a class="wordmark" href="#"
+          ><svg class="brand-mark" viewBox="15 15 70 70" aria-hidden="true">
+            <path d="M53 18C53 37 63 53 80 68H53Z" />
+            <path d="M44 35 21 74H44Z" /></svg
+          ><span>Sail <b>PDF</b><span class="wordmark-period">.</span></span></a
+        >
+        <p data-i18n="footerTagline">A clearer way to work with PDFs.</p>
+        <div>
+          <a href="https://github.com/csuhan/SailPDF" target="_blank" rel="noopener noreferrer"
+            >GitHub <i data-icon="arrow-up-right"></i></a
+          ><a
+            href="https://github.com/csuhan/SailPDF/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="releases"
+            >Releases</a
+          ><a href="#faq" data-i18n="questions">Questions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Sail PDF contributors.</span>
+        <div>
+          <button data-legal="privacy" data-i18n="privacyPolicy">Privacy</button
+          ><button data-legal="terms" data-i18n="terms">Beta terms</button
+          ><button data-legal="license" data-i18n="license">Apache 2.0</button
+          ><span class="footer-made" data-i18n="footerMade">Made for focused work.</span>
+        </div>
+      </div>
+    </footer>
+    <dialog id="download-dialog" class="site-dialog" aria-labelledby="download-dialog-title">
+      <button class="dialog-close icon-button" data-close-dialog aria-label="Close" data-i18n-aria="close">
+        <i data-icon="close"></i>
+      </button>
+      <div class="dialog-icon"><i data-icon="apple"></i></div>
+      <div class="eyebrow" data-i18n="betaLabel">SAIL PDF / PUBLIC BETA</div>
+      <h2 id="download-dialog-title" data-i18n="dialogDownloadTitle">A workspace for your Mac.</h2>
+      <p data-i18n="dialogDownloadIntro">Version 0.11.0 · macOS Apple Silicon</p>
+      <div class="download-details">
+        <span data-i18n="downloadPlatform">Platform</span><strong>macOS · Apple Silicon</strong
+        ><span data-i18n="downloadLicense">Source license</span><strong>Apache 2.0</strong
+        ><span data-i18n="downloadStatus">Release channel</span><strong data-i18n="beta">Beta</strong>
+      </div>
+      <p class="release-notice" data-i18n="releaseNotice">
+        This beta is unsigned and not notarized. Keep backups of important files. Check GitHub Releases for available
+        packages; if no release is listed yet, a public package has not been published.
+      </p>
+      <a
+        class="button button-ink button-full"
+        href="https://github.com/csuhan/SailPDF/releases"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><span data-i18n="viewReleases">View available releases</span><i data-icon="arrow-up-right"></i></a
+      ><a
+        class="dialog-secondary"
+        href="https://github.com/csuhan/SailPDF"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n="buildFromSource"
+        >Or build from source on GitHub</a
+      >
+    </dialog>
+    <dialog id="tool-dialog" class="site-dialog tool-dialog" aria-labelledby="tool-dialog-title">
+      <button class="dialog-close icon-button" data-close-dialog aria-label="Close" data-i18n-aria="close">
+        <i data-icon="close"></i>
+      </button>
+      <div id="tool-detail"></div>
+    </dialog>
+    <dialog id="legal-dialog" class="site-dialog legal-dialog" aria-labelledby="legal-dialog-title">
+      <button class="dialog-close icon-button" data-close-dialog aria-label="Close" data-i18n-aria="close">
+        <i data-icon="close"></i>
+      </button>
+      <h2 id="legal-dialog-title"></h2>
+      <pre></pre>
+    </dialog>
+  </body>
+</html>

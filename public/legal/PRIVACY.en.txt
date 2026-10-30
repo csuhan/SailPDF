@@ -1,0 +1,15 @@
+Sail PDF privacy notice
+Updated: October 30, 2026
+Project: https://github.com/csuhan/SailPDF
+
+The desktop application processes standard PDF reading, annotation and editing operations locally. Opening a PDF does not automatically upload it to a server. Document contents, annotations, conversations and local paths are not automatically included in diagnostic reports.
+
+AI is optional. Bundled models run on your computer after you choose to download them. Model downloads contact Hugging Face and its delivery services, which receive the network information required for a download. If you configure a custom AI endpoint, that service receives the context needed for the task. This may include selected text, retrieved passages, conversation context or a broader portion of the document when the task requires it. The service's own data policies and terms apply. A local-network endpoint may itself forward data to another service.
+
+The desktop application uses system-protected encryption for API keys. If protected storage is unavailable, a key remains in the current session rather than falling back to plaintext storage. Browser keys are held in memory and cleared when the page is refreshed. Legacy plaintext preferences are migrated and removed from ordinary settings where possible; historical backups may still contain earlier copies.
+
+Preferences, recent file locations, reading positions, recovery drafts, form values, and saved visual signatures may be stored on the device. These are separate from the source PDFs. Review the app settings to manage drafts and local model files. Keep independent backups of important work; recovery storage is not a guaranteed backup.
+
+Feedback is initiated by you. Automatic diagnostic fields are limited to application version, platform, language, environment and feature interface availability. The application does not automatically submit reports. Common API key formats and home-directory paths are masked in the description you enter, but you should inspect all content before sharing it. GitHub Issues may be public.
+
+Questions: https://github.com/csuhan/SailPDF/issues/new/choose

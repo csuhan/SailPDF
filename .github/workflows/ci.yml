@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Check public source hygiene
+        run: npm run check:publication
+      - name: Check formatting
+        run: npm run format:check
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+      - name: Build production frontend
+        run: npm run build
+      - name: Prepare synthetic PDF fixtures
+        run: |
+          brew list qpdf >/dev/null 2>&1 || brew install qpdf
+          npm run test:fixtures
+      - name: Complete regression suite
+        run: npm run test:e2e
+        env:
+          TMPDIR: ${{ runner.temp }}
+      - name: Native Electron integration
+        run: npm run test:native
+        env:
+          TMPDIR: ${{ runner.temp }}
+      - name: Retain test evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: test-logs
+          path: |
+            ${{ runner.temp }}/pdfpro-tests-*
+          if-no-files-found: ignore
+          retention-days: 7

@@ -1,0 +1,14 @@
+Sail PDF beta terms and limitations
+Updated: October 30, 2026
+Project: https://github.com/csuhan/SailPDF
+
+Sail PDF provides PDF reading, annotation, common editing operations and document assistance. The current packaged beta targets macOS on Apple Silicon. The current build is unsigned and not notarized. Check the repository's release page for available packages.
+
+Keep source files and independent backups. Inspect changes before saving and check complex exports in another PDF reader. Recovery drafts help reduce data loss but cannot recover data that was not written before a process termination, storage failure or power loss.
+
+Complex fonts, page layouts, transparency, forms and other PDF features can have limitations. Paragraph reflow, some font encodings and flattened annotations are not fully editable. Visual handwritten or typed signatures are page graphics, not certificate-based digital signatures or an identity verification service.
+
+AI answers and suggested edits may be incorrect. Review sources and changes before relying on them. Third-party services have their own availability, fees, terms and data practices. Connecting a service does not cause the application to accept its agreements or pay its fees on your behalf.
+
+The project's original source code is available under the Apache License, Version 2.0. See LICENSE and NOTICE. Third-party software, fonts and model weights retain their respective licenses and notices. The Apache License does not grant rights to project trademarks. These beta notes do not impose additional restrictions on the rights granted by the Apache License or exclude rights that applicable law cannot exclude.
+
