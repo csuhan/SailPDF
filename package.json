@@ -53,7 +53,7 @@
     "typescript": "~5.6.3",
     "vite": "6.4.5"
   },
-  "homepage": "https://csuhan.github.io/SailPDF/",
+  "homepage": "https://sailpdf.pages.dev/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/csuhan/SailPDF.git"

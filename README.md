@@ -5,7 +5,7 @@
   <h1>Sail PDF</h1>
   <p>A focused PDF workspace for your Mac.</p>
   <p>Read, annotate, edit and organize documents — with an optional AI assistant beside the page.</p>
-  <p><a href="https://csuhan.github.io/SailPDF/">Website</a> · <a href="https://github.com/csuhan/SailPDF/releases">Download beta</a> · <a href="https://github.com/csuhan/SailPDF/issues">Feedback</a></p>
+  <p><a href="https://sailpdf.pages.dev/">Website</a> · <a href="https://github.com/csuhan/SailPDF/releases">Download beta</a> · <a href="https://github.com/csuhan/SailPDF/issues">Feedback</a></p>
   <p><a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-172c40" alt="Apache 2.0"></a> <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-172c40" alt="macOS Apple Silicon"> <a href="https://github.com/csuhan/SailPDF/actions/workflows/ci.yml"><img src="https://github.com/csuhan/SailPDF/actions/workflows/ci.yml/badge.svg" alt="CI"></a></p>
 </div>
 
@@ -88,7 +88,7 @@ native/       macOS Vision OCR source
 build/        Editable app icon source
 scripts/      Asset generation, tests and packaging support
 public/legal/ Privacy, usage and model notices
-docs/         Project website served by GitHub Pages, images and contributor guides
+docs/         Project website served by Cloudflare Pages, images and contributor guides
 ```
 
 ## Limits worth knowing

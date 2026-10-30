@@ -5,7 +5,7 @@
   <h1>Sail PDF</h1>
   <p>专注于文档的 Mac PDF 工作空间。</p>
   <p>阅读、批注、编辑与页面整理，以及位于原文旁边的可选 AI 助手。</p>
-  <p><a href="https://csuhan.github.io/SailPDF/">项目主页</a> · <a href="https://github.com/csuhan/SailPDF/releases">下载测试版</a> · <a href="https://github.com/csuhan/SailPDF/issues">问题反馈</a></p>
+  <p><a href="https://sailpdf.pages.dev/">项目主页</a> · <a href="https://github.com/csuhan/SailPDF/releases">下载测试版</a> · <a href="https://github.com/csuhan/SailPDF/issues">问题反馈</a></p>
   <p><a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-172c40" alt="Apache 2.0"></a> <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-172c40" alt="macOS Apple Silicon"> <a href="https://github.com/csuhan/SailPDF/actions/workflows/ci.yml"><img src="https://github.com/csuhan/SailPDF/actions/workflows/ci.yml/badge.svg" alt="持续集成"></a></p>
 </div>
 
@@ -88,7 +88,7 @@ native/       macOS Vision OCR 源码
 build/        可编辑的应用图标源文件
 scripts/      资源生成、测试与打包支持
 public/legal/ 隐私、使用与模型说明
-docs/         GitHub Pages 主页、图片与贡献者文档
+docs/         Cloudflare Pages 主页、图片与贡献者文档
 ```
 
 ## 已知限制
