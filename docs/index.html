@@ -4,21 +4,104 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#f8f9f7" />
+    <!-- SEO:START -->
+    <title>Sail PDF — Open-source PDF Reader &amp; Editor for Mac</title>
     <meta
       name="description"
-      content="Sail PDF is an open-source desktop workspace for reading, annotating, editing and understanding PDFs. Local document tools. Your choice of AI."
+      content="Sail PDF is an open-source PDF reader and editor for Apple Silicon Macs. Annotate, merge, split and OCR PDFs locally, with optional on-device AI."
     />
-    <meta property="og:title" content="Sail PDF — A clearer way to work with PDFs" />
-    <meta
-      property="og:description"
-      content="Read, annotate, edit and understand. One focused PDF workspace, built for your Mac."
-    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://sailpdf.pages.dev/" />
+    <link rel="alternate" hreflang="en" href="https://sailpdf.pages.dev/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://sailpdf.pages.dev/zh-CN/" />
+    <link rel="alternate" hreflang="x-default" href="https://sailpdf.pages.dev/" />
+    <meta property="og:site_name" content="Sail PDF" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sailpdf.pages.dev/" />
-    <title>Sail PDF — A clearer way to work with PDFs</title>
+    <meta property="og:title" content="Sail PDF — Open-source PDF Reader &amp; Editor for Mac" />
+    <meta
+      property="og:description"
+      content="Sail PDF is an open-source PDF reader and editor for Apple Silicon Macs. Annotate, merge, split and OCR PDFs locally, with optional on-device AI."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:image" content="https://sailpdf.pages.dev/images/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Sail PDF workspace on Mac with PDF reading, editing and an optional AI assistant"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sail PDF — Open-source PDF Reader &amp; Editor for Mac" />
+    <meta
+      name="twitter:description"
+      content="Sail PDF is an open-source PDF reader and editor for Apple Silicon Macs. Annotate, merge, split and OCR PDFs locally, with optional on-device AI."
+    />
+    <meta name="twitter:image" content="https://sailpdf.pages.dev/images/social-card.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Sail PDF workspace on Mac with PDF reading, editing and an optional AI assistant"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://sailpdf.pages.dev/#website",
+            "url": "https://sailpdf.pages.dev/",
+            "name": "Sail PDF",
+            "inLanguage": ["en", "zh-CN"]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://sailpdf.pages.dev/#webpage",
+            "url": "https://sailpdf.pages.dev/",
+            "name": "Sail PDF — Open-source PDF Reader & Editor for Mac",
+            "description": "Sail PDF is an open-source PDF reader and editor for Apple Silicon Macs. Annotate, merge, split and OCR PDFs locally, with optional on-device AI.",
+            "inLanguage": "en",
+            "isPartOf": { "@id": "https://sailpdf.pages.dev/#website" },
+            "about": { "@id": "https://sailpdf.pages.dev/#software" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://sailpdf.pages.dev/#software",
+            "name": "Sail PDF",
+            "url": "https://sailpdf.pages.dev/",
+            "description": "Sail PDF is an open-source PDF reader and editor for Apple Silicon Macs. Annotate, merge, split and OCR PDFs locally, with optional on-device AI.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "macOS (Apple Silicon)",
+            "softwareVersion": "0.11.0 Beta",
+            "inLanguage": ["en", "zh-CN"],
+            "license": "https://www.apache.org/licenses/LICENSE-2.0",
+            "downloadUrl": "https://github.com/csuhan/SailPDF/releases",
+            "releaseNotes": "https://github.com/csuhan/SailPDF/releases",
+            "sameAs": "https://github.com/csuhan/SailPDF",
+            "image": "https://sailpdf.pages.dev/images/logo.png",
+            "screenshot": "https://sailpdf.pages.dev/images/workspace.png",
+            "featureList": [
+              "Comfortable reading",
+              "Highlights & markup",
+              "Notes & comments",
+              "Text & image editing",
+              "Fill PDF forms",
+              "Handwritten signatures",
+              "Organize pages",
+              "Merge & split",
+              "Export your work",
+              "Recognize scanned text",
+              "Protect & redact",
+              "Document assistant"
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- SEO:END -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="site.js" defer></script>
+    <script type="module" src="site.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -36,8 +119,8 @@
           ><a href="#principles" data-i18n="navPrivacy">Our approach</a>
         </nav>
         <div class="nav-actions">
-          <button class="language-switch" data-language aria-label="Switch to Chinese">
-            EN <span class="lang-divider">/</span> 中</button
+          <a class="language-switch" data-language href="/zh-CN/" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">
+            <strong>EN</strong> <span class="lang-divider">/</span> 中</a
           ><a
             class="github-link"
             href="https://github.com/csuhan/SailPDF"
@@ -69,13 +152,15 @@
       <section class="hero wrap">
         <div class="hero-copy">
           <div class="eyebrow">
-            <span class="status-dot"></span><span data-i18n="heroLabel">YOUR DESKTOP. YOUR DOCUMENTS.</span>
+            <span class="status-dot"></span
+            ><span data-i18n="heroLabel">OPEN-SOURCE PDF READER &amp; EDITOR FOR MAC</span>
           </div>
-          <h1 data-i18n-html="heroTitle">Less friction.<br />More <span class="hero-emphasis">focus.</span></h1>
+          <h1 data-i18n-html="heroTitle">Sail PDF.<br /><span class="hero-emphasis">Reader &amp; editor.</span></h1>
         </div>
         <div class="hero-intro">
           <p data-i18n="heroDescription">
-            Read, annotate, edit and understand your PDFs. One thoughtful workspace that puts the document first.
+            Sail PDF is an open-source PDF reader and editor for Apple Silicon Macs. Read, annotate, merge, split and
+            OCR PDFs locally, with an optional AI assistant.
           </p>
           <div class="hero-actions">
             <button class="button button-ink" data-download>
@@ -235,7 +320,7 @@
         <div class="section-heading">
           <div>
             <div class="eyebrow" data-i18n="toolsLabel">A COMPLETE DAILY TOOLKIT</div>
-            <h2 data-i18n-html="toolsTitle">The right tool.<br />Right where you need it.</h2>
+            <h2 data-i18n-html="toolsTitle">Read, edit and<br />organize PDFs.</h2>
           </div>
           <p data-i18n="toolsIntro">
             From a quick highlight to a final export. Find the everyday essentials without interrupting your flow.
@@ -260,7 +345,82 @@
               /><kbd>/</kbd></label
             >
           </div>
-          <div class="tool-grid"></div>
+          <div class="tool-grid">
+            <!-- TOOLS:START -->
+            <button class="tool-card" data-tool="read">
+              <span class="tool-card-icon"><i data-icon="book"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Comfortable reading</h3>
+              <p>Multiple PDFs, page navigation and reading colors.</p>
+            </button>
+            <button class="tool-card" data-tool="highlight">
+              <span class="tool-card-icon"><i data-icon="highlight"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Highlights &amp; markup</h3>
+              <p>Highlight, underline or strike through a passage.</p>
+            </button>
+            <button class="tool-card" data-tool="notes">
+              <span class="tool-card-icon"><i data-icon="note"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Notes &amp; comments</h3>
+              <p>Leave a thought right where it belongs.</p>
+            </button>
+            <button class="tool-card" data-tool="text">
+              <span class="tool-card-icon"><i data-icon="edit"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Text &amp; image editing</h3>
+              <p>Make focused updates without starting over.</p>
+            </button>
+            <button class="tool-card" data-tool="forms">
+              <span class="tool-card-icon"><i data-icon="form"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Fill PDF forms</h3>
+              <p>Complete existing form fields and save the result.</p>
+            </button>
+            <button class="tool-card" data-tool="signature">
+              <span class="tool-card-icon"><i data-icon="signature"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Handwritten signatures</h3>
+              <p>Place a drawn or typed signature on a page.</p>
+            </button>
+            <button class="tool-card" data-tool="organize">
+              <span class="tool-card-icon"><i data-icon="pages"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Organize pages</h3>
+              <p>Reorder, rotate, insert and remove pages.</p>
+            </button>
+            <button class="tool-card" data-tool="merge">
+              <span class="tool-card-icon"><i data-icon="merge"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Merge &amp; split</h3>
+              <p>Bring files together. Keep only what you need.</p>
+            </button>
+            <button class="tool-card" data-tool="export">
+              <span class="tool-card-icon"><i data-icon="export"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Export your work</h3>
+              <p>Save pages as images, or export document text.</p>
+            </button>
+            <button class="tool-card" data-tool="ocr">
+              <span class="tool-card-icon"><i data-icon="ocr"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Recognize scanned text</h3>
+              <p>Make scanned pages searchable with desktop OCR.</p>
+            </button>
+            <button class="tool-card" data-tool="protect">
+              <span class="tool-card-icon"><i data-icon="shield"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Protect &amp; redact</h3>
+              <p>Manage PDF protection and remove sensitive content.</p>
+            </button>
+            <button class="tool-card" data-tool="assistant">
+              <span class="tool-card-icon"><i data-icon="sparkle"></i></span
+              ><span class="tool-card-arrow"><i data-icon="arrow-up-right"></i></span>
+              <h3>Document assistant</h3>
+              <p>Ask, find and prepare changes alongside the PDF.</p>
+            </button>
+            <!-- TOOLS:END -->
+          </div>
           <p class="tool-empty" role="status" hidden data-i18n="emptyTools">
             No matching tools. Try another search or category.
           </p>
@@ -279,7 +439,7 @@
             <div class="eyebrow">
               <i data-icon="sparkle"></i><span data-i18n="aiLabel">A LITTLE HELP. A LOT OF CLARITY.</span>
             </div>
-            <h2 data-i18n-html="aiTitle">Work with<br />your document.</h2>
+            <h2 data-i18n-html="aiTitle">AI alongside<br />your PDF.</h2>
             <p data-i18n="aiIntro">
               Ask questions, find the details that matter, or prepare an edit. Your assistant works alongside the PDF,
               so the source stays in sight.

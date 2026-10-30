@@ -29,6 +29,8 @@ jobs:
         run: npm run check:publication
       - name: Check formatting
         run: npm run format:check
+      - name: Validate website SEO and interactions
+        run: npm run test:website
       - name: Audit dependencies
         run: npm audit --audit-level=high
       - name: Build production frontend

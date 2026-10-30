@@ -28,7 +28,10 @@
     "format": "prettier --write src electron locales scripts docs .github *.json *.md *.yml",
     "format:check": "prettier --check src electron locales scripts docs .github *.json *.md *.yml",
     "app:prepare": "node scripts/fetch-llama.mjs && npm run build:ocr && npm run icons",
-    "check:publication": "node scripts/check-publication.mjs"
+    "check:publication": "node scripts/check-publication.mjs",
+    "build:website": "node scripts/build-website.mjs",
+    "check:website": "node scripts/build-website.mjs --check",
+    "test:website": "node scripts/test-website-seo.mjs"
   },
   "dependencies": {
     "@pdf-lib/fontkit": "^1.1.1",
